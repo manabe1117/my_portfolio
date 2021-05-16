@@ -1,0 +1,47 @@
+.works{
+    .works-cont{
+        padding-top: 60px;
+    }
+
+    .works-list{
+        display: block;
+        justify-content: center;
+        text-align: center;
+        .works-item{
+            display: inline-flex;
+            flex-direction: column-reverse;
+            width: 90%;
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-top: 30px;
+            @include overTab{
+                width: 45%;
+            }
+
+            @include overPC{
+                width: 30%;
+            }
+            .item-text{
+                font-size: 18px;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            .item-image{
+                position: relative;
+                height: 350px;
+                overflow: hidden;
+                box-shadow: 2px 2px 4px;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

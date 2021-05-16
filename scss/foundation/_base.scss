@@ -1,0 +1,63 @@
+// COLORS
+// @inlcude cl(black);
+//--------------------------------------------------
+
+$colors: (
+  white: #fff,
+  black: #000,
+  text: #333333,
+  grey: #6e6e6e,
+  lightgrey: #f2f2f2,
+  red: #ff0000,
+  primary: #4d0000,
+  gold: #b8860bea,
+  baige: #ffffdd,
+  lightwood: #F8A84F,
+  darkwood: #A7490B,
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
+
+// FONT
+// @inlcude SystemUI;
+//--------------------------------------------------
+
+@mixin SystemUI {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "ヒラギノ角ゴ W3",
+    sans-serif;
+}
+
+// RESPONSIVE
+// @include overTab
+// @include overPC
+//--------------------------------------------------
+
+@mixin overTab {
+  @media print, screen and (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin overPC {
+  @media print, screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+// UTILITY
+//--------------------------------------------------
+
+._sp {
+  @include overTab {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+  @include overTab {
+    display: block;
+  }
+}

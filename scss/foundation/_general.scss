@@ -1,0 +1,17 @@
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: cl(white);
+  @include SystemUI;
+}
+
+a {
+  text-decoration: none;
+  color: cl(black);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}

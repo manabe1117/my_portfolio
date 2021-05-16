@@ -1,0 +1,47 @@
+.skills{
+    background-image: url(../image/haguruma.jpg);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .skills-img{
+        background: rgba(255,255,255,0.9);
+    }
+    .skills-cont{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: auto;
+        justify-content: center;
+        display:block;
+        width: 100%;
+        text-align: center;
+        .skill{
+            display: inline-block;
+            width: 80%;
+            box-shadow: 2px 2px 4px;
+            background-color: cl(white);
+            white-space: nowrap;
+            justify-content: center;
+            margin: 10px 10px 10px 10px;
+            height: auto;
+            border: none;
+            transition-duration: 0.5s;
+
+            @include overTab{
+                width: 38%;
+            }
+
+            @include overPC{
+                width: 22%;
+            }
+
+            p{
+                text-align: center;
+                font-size: 18px;
+            }
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

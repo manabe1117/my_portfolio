@@ -1,0 +1,164 @@
+.header {
+  .header-fixed {
+    z-index: 20;
+    background-color: cl(white);
+    height: 94px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-logo{
+    width: 90px;
+  }
+
+  .nav-btn {
+    width: 52px;
+    height: 30px;
+    appearance: none;
+    background: transparent;
+    border: none;
+    font: inherit;
+    outline: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: 30px;
+    @include overPC {
+      display: none;
+    }
+
+    &.-active {
+      span {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: transform 0.3s ease;
+        &:first-child {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: cl(black);
+      display: block;
+      transition: transform 0.3s ease;
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      &:last-child {
+        bottom: 0;
+      }
+    }
+  }
+
+  // .header-nav {
+  //   visibility: hidden;
+  //   &.-active {
+  //     opacity: 1;
+  //     visibility: visible;
+  //   }
+  // }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000cc;
+    padding-top: 94px;
+    z-index: 10;
+    display: none;
+    @include overPC {
+      // position: static;
+      display: flex;
+      width: initial;
+      background-color: transparent;
+      padding-top: 0;
+      z-index: 30;
+      left: inherit;
+      right: 0;
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 0;
+
+    @include overPC {
+      display: flex;
+      margin-bottom: 0;
+      visibility: visible;
+      margin-left: 33px;
+      margin-right: 20px;
+      margin-bottom: 40px;
+    }
+
+    .nav-item {
+      margin-top: 40px;
+
+      + .nav-item {
+        margin-top: 20px;
+      }
+
+      @include overPC {
+        margin-top: 38px;
+        + .nav-item {
+          margin-top: 38px;
+          margin-left: 25px;
+        }
+      }
+
+      &.contact-btn{
+        @include overPC{
+          margin-top: 20px;
+          margin-left: 40px;
+        }
+        a{
+          background-color: cl(darkwood);
+          color: cl(white);
+          font-size: 16px;
+          @include overPC{
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    a {
+      color: cl(white);
+      font-size: 22px;
+      @include overPC {
+        font-size: 18px;
+        color: cl(black);
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 300px;
+      }
+    }
+  }
+}

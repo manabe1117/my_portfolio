@@ -1,0 +1,72 @@
+.service{
+    background-color: cl(lightgrey);
+    .service-cont{
+        display: flex;
+        padding-top: 60px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        @include overPC{
+            flex-direction: row-reverse;
+        }
+    }
+
+    .service-text{
+        padding-top: 30px;
+        @include overPC{
+            padding-top: 0;
+            padding-left: 50px;
+        }
+    }
+
+    .service-list{
+        .service-item{
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            +.service-item{
+                margin-top: 10px;
+            }
+
+            .item-title{
+
+            }
+
+            .item-price{
+
+            }
+
+            @include overTab{
+                font-size: 22px;
+            }
+        }
+    }
+
+    .service-desc{
+        margin-top: 20px;
+        @include  overTab{
+            font-size: 18px;
+        }
+    }
+
+    .service-img{
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+        img{
+            border-radius: 10px;
+        }
+
+        @include overPC{
+            width: 400px;
+            margin: 0;
+        }
+    }
+
+    .contact-btn{
+        margin-top: 50px;
+        a{
+            background-color: cl(darkwood);
+            color: cl(white);
+        }
+    }
+}

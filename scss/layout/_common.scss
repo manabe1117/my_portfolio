@@ -1,0 +1,139 @@
+.cmn-title {
+    color: cl(white);
+    // background-color: cl(white);
+    background-image: url(../image/wood_4.jpg);
+    text-align: center;
+    display: block;
+    width: 200px;
+    margin: auto;
+    position: relative;
+    font-weight: bold;
+    // border: 2px solid cl(black);
+
+    .main {
+      font-size: 26px;
+      display: block;
+      position: relative;
+      z-index: 1;
+      text-transform: capitalize;
+      @include overTab{
+        font-size: 32px;
+      }
+    }
+
+    .main {
+      padding-top: 1.3rem;
+    }
+
+    .main:before,
+    .main:after {
+      position: absolute;
+      content: '';
+    }
+
+    // .main:before {
+    //   top: -34px;
+    //   left: calc(50% - 34px);
+    //   width: 68px;
+    //   height: 38px;
+    //   border: 2px dashed #000;
+    //   border-radius: 50vw 50vw 0 0;
+    // }
+
+    // .main:after {
+    //   position: absolute;
+    //   top: 4px;
+    //   left: calc(50% - 32px);
+    //   width: 64px;
+    //   height: 10px;
+    //   background: #fff;
+    // }
+
+    .sub {
+      font-size: 16px;
+      display: block;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 1.3rem;
+      @include overTab{
+        font-size: 20px;
+      }
+    }
+}
+
+.cmn-title::before,
+.cmn-title::after{
+  position: absolute;
+  content: '';
+}
+
+// .cmn-title::before{
+//   top: -40px;
+//   left: calc(50% - 40px);
+//   width: 80px;
+//   height: 80px;
+//   border: 2px solid cl(black);
+//   border-radius: 50%;
+//   background: cl(white);
+// }
+
+.cmn-title::after{
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border: 2px dashed cl(white);
+  background: transparent;
+}
+
+.cmn-title i{
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 60px;
+  position: absolute;
+  z-index: 2;
+  top: -30px;
+  left: calc(50% - 38px);
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  color: cl(black);
+  display: none;
+}
+
+.cmn-section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.cmn-btn{
+  text-align: center;
+  a{
+      font-size: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 300px;
+      display: inline-block;
+      border-radius: 40px;
+      font-weight: bold;
+
+      &:hover{
+          opacity: 0.6;
+      }
+  }
+}
+
+.inner {
+    max-width: 1280px;
+    margin: auto;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include overTab{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+}
+

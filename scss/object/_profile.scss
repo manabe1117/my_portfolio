@@ -1,0 +1,93 @@
+.profile{
+    .profile-cont{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .profile-text{
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 30px 15px;
+        background-color: cl(lightgrey);
+        border-radius: 20px;
+        @include overTab{
+            padding: 40px 20px;
+        }
+
+        @include overPC{
+            font-size: 20px;
+            padding: 50px 30px;
+        }
+        .name{
+            font-size: 22px;
+            justify-content: center;
+            @include overTab{
+                display: flex;
+            }
+            @include overPC{
+                font-size: 26px;
+            }
+            .kanji{
+                display: block;
+            }
+        }
+
+        .career-list{
+            margin-top: 30px;
+            .career-item{
+                padding-top: 10px;
+            }
+        }
+
+        .intro-list{
+            margin-top: 30px;
+            .intro-item{
+                display: flex;
+                margin: auto;
+                justify-content: center;;
+                // width: 250px;
+                // justify-content: space-between;
+
+                +.intro-item{
+                    margin-top: 10px;
+                }
+
+                dd{
+                    // margin-left: 20px;
+                }
+            }
+        }
+
+        p{
+            margin-top: 30px;
+        }
+    }
+
+    .profile-img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+        img{
+            object-fit: cover;
+            width: 340px;
+            height: 340px;
+            object-position: -30px 0;
+        }
+
+        @include overTab{
+            width: 400px;
+            height: 400px;
+            img{
+                object-fit: cover;
+                width: 450px;
+                height: 450px;
+                object-position: -40px 0;
+            }
+        }
+    }
+}

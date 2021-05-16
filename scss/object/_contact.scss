@@ -1,0 +1,100 @@
+.contact{
+    background-image: url(../image/wood.jpg);
+    color: cl(white);
+    padding-top: 62px;
+    padding-bottom: 42px;
+    position: relative;
+    height: 500px;
+
+  .custom-shape-divider-top-1620205292 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1620205292 svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 157px;
+}
+
+.custom-shape-divider-top-1620205292 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-top-1620205292 svg {
+        width: calc(140% + 1.3px);
+        height: 101px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1620205292 svg {
+        width: calc(142% + 1.3px);
+        height: 61px;
+    }
+}
+
+.footer-cont{
+    padding-top: 180px;
+    .footer-text{
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .footer-contact-btn{
+      margin-top: 50px;
+      a{
+        background-color: cl(white);
+        color: cl(darkwood);
+      }
+    }
+
+    p{
+      margin-top: 50px;
+      font-weight: bold;
+    }
+  }
+
+    .nav {
+    }
+
+    .nav-list {
+      justify-content: center;
+      font-size: 16px;
+      @include overTab {
+        display: flex;
+      }
+      .nav-list-item {
+        text-align: center;
+        + .nav-list-item {
+          margin-top: 20px;
+          @include overTab {
+            margin-top: 0;
+            margin-left: 50px;
+          }
+        }
+        a {
+          color: cl(white);
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+}

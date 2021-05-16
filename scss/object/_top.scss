@@ -1,0 +1,32 @@
+.top {
+  background-image: url(../image/wood.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 674px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 94px;
+
+  .top-title {
+    color: cl(white);
+    text-align: center;
+    display: block;
+    .main{
+      font-size: 36px;
+      display: block;
+      @include overTab{
+        font-size: 50px;
+      }
+    }
+    .sub{
+      margin-top: 30px;
+      font-size: 20px;
+      display: block;
+      @include overTab{
+        font-size: 36px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
